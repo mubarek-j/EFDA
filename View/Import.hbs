@@ -1,0 +1,315 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>EFDA I-import</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap1.min.css" />
+    <link rel="stylesheet" href="/bootstrap/bootstrap2.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+    />
+    <link rel="stylesheet" href="/Fonts/fontawesome-all.min.css" />
+  </head>
+
+  <body id="page-top">
+    <div id="wrapper">
+      <nav
+        class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-dark p-0"
+      >
+        <div class="container-fluid d-flex flex-column p-0">
+          <a
+            class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
+            href="#"
+          >
+            <div class="sidebar-brand-icon rotate-n-15">
+              <i class="fas fa-laugh-wink"></i>
+            </div>
+            <div class="sidebar-brand-text mx-3"><span>EFDA</span></div>
+          </a>
+          <hr class="sidebar-divider my-0" />
+          <ul class="nav navbar-nav text-light" id="accordionSidebar">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" href="/auth/showprofile"><i
+                  class="fas fa-user"
+                ></i><span>Show Profile</span></a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" href="/profile"><i
+                  class="fas fa-user"
+                ></i><span>Complete Profile</span></a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" href="#"><i
+                  class="fas fa-user"
+                ></i><span>I-import</span></a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" href="/Login"><i
+                  class="fas fa-user"
+                ></i><span>Logout</span></a>
+            </li>
+          </ul>
+          <div class="text-center d-none d-md-inline">
+            <button
+              class="btn rounded-circle border-0"
+              id="sidebarToggle"
+              type="button"
+            ></button>
+          </div>
+        </div>
+      </nav>
+      <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col">
+                <div class="card shadow mb-3">
+                  <div class="card-header py-3">
+                    <p class="text-dark m-0 font-weight-bold">Insert Licence</p>
+                  </div>
+                  <div class="card-body">
+                    <form action="/auth/Import" method="POST">
+                      <div class="form-row">
+                        <div class="col">
+                          <div class="form-group">
+                            <label for="orgLicence"><strong>Organization Licence</strong></label>
+                            <input
+                              id="orgLicence"
+                              class="form-control"
+                              type="text"
+                              name="orgLicence"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <button class="btn btn-dark btn-sm" type="submit">
+                          Submit
+                        </button>
+                        {{#if licence}}
+                          <p class="text-danger">{{licence}}</p>
+                        {{/if}}
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col">
+                <div class="card shadow mb-3">
+                  <div class="card-header py-3">
+                    <p class="text-dark m-0 font-weight-bold">
+                      Fill the informations to order the import medicine
+                    </p>
+                  </div>
+                  <div class="card-body">
+                    <form>
+                      <fieldset disabled="disabled">
+                        <div class="form-row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="org-name"><strong>Organization Name</strong></label><input
+                                id="org-name"
+                                class="form-control"
+                                type="text"
+                                name="Organization"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="address"><strong>Organization Address</strong></label><input
+                                id="address"
+                                class="form-control"
+                                type="text"
+                                name="Address"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="first_name"><strong>Applicant Full
+                                  Name</strong></label><input
+                                id="first_name"
+                                class="form-control"
+                                type="text"
+                                name="first_name"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="applicant"><strong>Applicant Role</strong></label><select
+                                id="applicant"
+                                class="form-control"
+                                name="applicant"
+                              >
+                                <option class="form-control" value="Owner">
+                                  Owner
+                                </option>
+                                <option
+                                  class="form-control"
+                                  value="Focal Person"
+                                >
+                                  Focal Person
+                                </option>
+                                <option
+                                  class="form-control"
+                                  value="Technical Manager"
+                                >
+                                  Technical Manager
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="importDate"><strong>Approximate date
+                                  of import</strong></label><input
+                                id="importDate"
+                                class="form-control"
+                                type="date"
+                                name="importDate"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="entry"><strong>Point of Entry</strong></label><input
+                                id="entry"
+                                class="form-control"
+                                type="text"
+                                name="Entry"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="substance"><strong>Substance Name</strong></label><input
+                                id="substance"
+                                class="form-control"
+                                type="text"
+                                name="substanceName"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="drugCode"><strong>Drug Code</strong></label><input
+                                id="drugCode"
+                                class="form-control"
+                                type="text"
+                                name="drugCode"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="concentration"><strong
+                                >Concentration/Strength</strong></label><input
+                                id="concentration"
+                                class="form-control"
+                                type="text"
+                                name="Concentration"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="formOfSub"><strong>Form of Substance
+                                  (eg tablet,vials)</strong></label><input
+                                id="formOfSub"
+                                class="form-control"
+                                type="text"
+                                name="FormofSubstance"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="packSize"><strong>Pack type and size</strong></label><input
+                                id="packSize"
+                                class="form-control"
+                                type="text"
+                                name="PackSize"
+                              />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label for="totalPack"><strong>Total number of
+                                  pack in shipment</strong></label><input
+                                id="totalPack"
+                                class="form-control"
+                                type="number"
+                                name="TotalPack"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <button class="btn btn-dark btn-sm" type="submit">
+                            Order Import
+                          </button>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="bg-white sticky-footer">
+          <div class="container my-auto">
+            <div class="text-center my-auto copyright">
+              <span>Copyright © Brand 2022</span>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <a class="border rounded d-inline scroll-to-top" href="#page-top"><i
+          class="fas fa-angle-up"
+        ></i></a>
+    </div>
+    <script src="/bootstrap/jquery.min.js"></script>
+    <script src="/bootstrap/bootstrap.min.js"></script>
+    <script src="/bootstrap/chart.min.js"></script>
+    <script src="/bootstrap/bs-init.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"
+    ></script>
+    <script src="/bootstrap/theme.js"></script>
+  </body>
+</html>
