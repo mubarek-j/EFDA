@@ -55,7 +55,7 @@ exports.register = (req, res) => {
     }
   );
 };
-
+//Admin register module is done
 exports.Adminregister = (req, res) => {
   const {
     first_name,
