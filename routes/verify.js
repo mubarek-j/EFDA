@@ -1,3 +1,4 @@
+// verification code fixed
 const jwt = require('jsonwebtoken');
 
 module.exports = async function (req, res, next) {
@@ -7,7 +8,7 @@ module.exports = async function (req, res, next) {
     if (!token) return res.status(400).send("Invalid token");
 
     try {
-        
+
         const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
         req.user = decoded;
 
@@ -17,5 +18,5 @@ module.exports = async function (req, res, next) {
         console.log(error);
         return res.redirect('/login');
     }
-    
+
 }
