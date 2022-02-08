@@ -20,7 +20,6 @@ exports.register = (req, res) => {
     password,
     password_repeat,
   } = req.body;
-
   db.query(
     "SELECT `email` FROM `userprofile` WHERE `email` = ?",
     [email],
@@ -309,7 +308,7 @@ exports.Import1 = (req, res) => {
     }
   );
 };
-
+//logout functionality 
 exports.logout = (req, res) => {
   res.clearcookie("jwt");
   return res.redirect("/");
