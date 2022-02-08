@@ -1,3 +1,4 @@
+
 const bcrypt = require("bcryptjs/dist/bcrypt");
 const mysql = require("mysql");
 const jwt = require("jsonwebtoken");
@@ -8,7 +9,7 @@ const db = mysql.createConnection({
   password: process.env.PASSWORD,
   database: process.env.DATABASE,
 });
-
+// registers a user to the system
 exports.register = (req, res) => {
   const {
     first_name,
