@@ -120,6 +120,7 @@ exports.message = (req, res) => {
   );
 };
 
+//Login and authentication
 exports.Login = (req, res) => {
   const { email, password } = req.body;
   db.query(
@@ -156,7 +157,7 @@ exports.Login = (req, res) => {
     }
   );
 };
-
+//Admin Login and authentication
 exports.Adminlogin = (req, res) => {
   const { email, password } = req.body;
   db.query(
@@ -242,7 +243,7 @@ exports.showProfile = function (req, res) {
     }
   );
 };
-
+//imports
 exports.Import = (req, res) => {
   const { orgLicence } = req.body;
   db.query(
@@ -262,7 +263,7 @@ exports.Import = (req, res) => {
     }
   );
 };
-
+//this is import for 1
 exports.Import1 = (req, res) => {
   const {
     Organization,
