@@ -1,0 +1,194 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>EFDA - Login</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap1.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+    />
+    <link rel="stylesheet" href="/Fonts/font-awesome.min.css" />
+  </head>
+
+  <body id="page-top">
+    <nav
+      class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#page-top">Ethiopian Food and Drug
+          Administration</a><button
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toogle="collapse"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="nav navbar-nav ml-auto text-uppercase">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link js-scroll-trigger" href="/">Home</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link js-scroll-trigger" href="/Login">Import</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link js-scroll-trigger" href="#">Admin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="bg-dark">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col col-xl-10">
+            <div class="card" style="border-radius: 1rem">
+              <div class="row g-0">
+                <div class="col-md-6 col-lg-5 d-none d-md-block">
+                  <img
+                    src="/Images/EFDA.png"
+                    alt="login form"
+                    class="img-fluid"
+                    style="
+                      border-radius: 1rem 0 0 1rem;
+                      height: 430px;
+                      margin-top: 40px;
+                    "
+                  />
+                </div>
+                <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                  <div class="card-body p-4 p-lg-5 text-black">
+                    <form action="/auth/Admin-login" method="POST">
+                      <div class="d-flex align-items-center mb-3 pb-1">
+                        <i
+                          class="fas fa-cubes fa-2x me-3"
+                          style="color: #ff6219"
+                        ></i>
+                        <span class="h1 fw-bold mb-0">Administrator Login</span>
+                      </div>
+
+                      <h5
+                        class="fw-normal mb-3 pb-3"
+                        style="letter-spacing: 1px"
+                      >
+                        Sign into your account
+                      </h5>
+                      {{#if error}}
+                        <h6 class="text-danger">{{error}}</h6>
+                      {{/if}}
+                      <div class="form-outline mb-4">
+                        <input
+                          type="text"
+                          id="form2Example17"
+                          class="form-control form-control-lg"
+                          name="email"
+                          autocomplete="off"
+                          required
+                        />
+                        <label
+                          class="form-label"
+                          for="form2Example17"
+                        >E-mail</label>
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <input
+                          type="password"
+                          id="form2Example27"
+                          class="form-control form-control-lg"
+                          name="password"
+                          required
+                        />
+                        <label
+                          class="form-label"
+                          for="form2Example27"
+                        >Password</label>
+                      </div>
+
+                      <div class="pt-1 mb-4">
+                        <button
+                          class="btn btn-dark btn-lg btn-block"
+                          type="submit"
+                        >
+                          Login
+                        </button>
+                      </div>
+
+                      <a class="small text-muted" href="#!">Forgot password?</a>
+                      <p class="mb-5 pb-lg-2" style="color: #393f81">
+                        Don't have an account?
+                        <a
+                          href="/Admin-register"
+                          style="color: #393f81"
+                        >Register here</a>
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row" id="page-bottom">
+          <div class="col-md-4">
+            <span class="copyright">Copyright&nbsp;© Brand 2022</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#page-bottom"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#page-bottom"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#page-bottom"><i class="fa fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline quicklinks">
+              <li>
+                <span class="copyright">Medhn Developers Team, 2022</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/bootstrap/jquery.min.js"></script>
+    <script src="/bootstrap/bootstrap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+    ></script>
+
+    <script src="/bootstrap/agency.js"></script>
+  </body>
+</html>
