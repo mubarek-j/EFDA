@@ -314,7 +314,7 @@ exports.logout = (req, res) => {
   res.clearcookie("jwt");
   return res.redirect("/");
 };
-//Admin message
+//Admin message is done
 exports.Adminmessage = (req, res) => {
   db.query("SELECT * FROM `messages`", (error, result) => {
     if (error) {
