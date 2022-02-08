@@ -1,9 +1,7 @@
 Group Members
 Migbar Abera
 Mohammed Abdurohman        ETS 0768/11
-Mohammed Hussien
-Mohammed Abdurohman
-Mohammed Hussien	   ETS 0771/11
+Mohammed Hussien	         ETS 0771/11
 Mubarek Jenberu
 Natanim Issa               ETS 0813/11
 Rabia Hassen               ETS 0879/11
