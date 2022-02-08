@@ -102,7 +102,7 @@ exports.Adminregister = (req, res) => {
     }
   );
 };
-
+//message
 exports.message = (req, res) => {
   const { fullName, email, phoneNumber, message } = req.body;
   db.query(
@@ -314,7 +314,7 @@ exports.logout = (req, res) => {
   res.clearcookie("jwt");
   return res.redirect("/");
 };
-
+//Admin message
 exports.Adminmessage = (req, res) => {
   db.query("SELECT * FROM `messages`", (error, result) => {
     if (error) {
@@ -324,7 +324,7 @@ exports.Adminmessage = (req, res) => {
     }
   });
 };
-
+//Admin
 exports.Admin = (req, res) => {
   db.query("SELECT * FROM `order`", (error, result) => {
     if (error) {
