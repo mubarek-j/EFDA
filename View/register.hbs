@@ -1,0 +1,176 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>I-licence Register</title>
+    <link rel="stylesheet" href="/bootstrap/bootstrap1.min.css" />
+    <link rel="stylesheet" href="/bootstrap/bootstrap2.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    />
+    <link rel="stylesheet" href="/Fonts/fontawesome-all.min.css" />
+  </head>
+
+  <body class="bg-dark">
+    <nav
+      class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#page-top">Ethiopian Food and Drug
+          Administration</a><button
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toogle="collapse"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="nav navbar-nav ml-auto text-uppercase">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link js-scroll-trigger" href="/">Home</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link js-scroll-trigger" href="/Login">Import</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link js-scroll-trigger"
+                href="/Admin-login"
+              >Admin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container pt-5">
+      <div class="card shadow-lg o-hidden border-0 my-5">
+        <div class="card-body p-0">
+          <div class="row">
+            <div class="col-lg-5 d-none d-lg-flex">
+              <div
+                class="flex-grow-1 bg-register-image mt-3"
+                style="background-image: url(/Images/EFDA.png)"
+              ></div>
+            </div>
+            <div class="col-lg-7">
+              <div class="p-5">
+                <div class="text-center">
+                  <h4 class="text-dark mb-4">Create an Account!</h4>
+                  {{#if message}}
+                    <p class="text-danger">{{message}}</p>
+                  {{/if}}
+                  {{#if error}}
+                    <p class="text-danger">{{error}}</p>
+                  {{/if}}
+                  {{#if Success}}
+                    <p class="text-success"><a href="/Login">{{Success}}</a></p>
+                  {{/if}}
+                </div>
+                <form class="user" action="/auth/register" method="POST">
+                  <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <input
+                        class="form-control form-control-user"
+                        type="text"
+                        id="exampleFirstName"
+                        placeholder="First Name"
+                        name="first_name"
+                      />
+                    </div>
+                    <div class="col-sm-6">
+                      <input
+                        class="form-control form-control-user"
+                        type="text"
+                        id="exampleFirstName"
+                        placeholder="Last Name"
+                        name="last_name"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      class="form-control form-control-user"
+                      type="email"
+                      id="exampleInputEmail"
+                      aria-describedby="emailHelp"
+                      placeholder="Email Address"
+                      name="email"
+                    />
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <input
+                        class="form-control form-control-user"
+                        type="text"
+                        placeholder="Username"
+                        name="userName"
+                      />
+                    </div>
+                    <div class="col-sm-6">
+                      <input
+                        class="form-control form-control-user"
+                        type="tel"
+                        placeholder="Phone number"
+                        name="phoneNumber"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <input
+                        class="form-control form-control-user"
+                        type="password"
+                        id="examplePasswordInput"
+                        placeholder="Password"
+                        name="password"
+                      />
+                    </div>
+                    <div class="col-sm-6">
+                      <input
+                        class="form-control form-control-user"
+                        type="password"
+                        id="exampleRepeatPasswordInput"
+                        placeholder="Repeat Password"
+                        name="password_repeat"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="btn btn-primary btn-block text-white btn-user"
+                    type="submit"
+                  >
+                    Register Account
+                  </button>
+                  <hr />
+                </form>
+                <div class="text-center">
+                  <a class="small" href="/Login">Already have an account? Login!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/bootstrap/jquery.min.js"></script>
+    <script src="/bootstrap/bootstrap.min.js"></script>
+    <script src="/bootstrap/chart.min.js"></script>
+    <script src="/bootstrap/bs-init.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"
+    ></script>
+    <script src="/bootstrap/theme.js"></script>
+  </body>
+</html>
