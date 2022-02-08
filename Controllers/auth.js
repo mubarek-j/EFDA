@@ -119,6 +119,7 @@ exports.message = (req, res) => {
   );
 };
 
+//Login and authentication
 exports.Login = (req, res) => {
   const { email, password } = req.body;
   db.query(
@@ -155,7 +156,7 @@ exports.Login = (req, res) => {
     }
   );
 };
-
+//Admin Login and authentication
 exports.Adminlogin = (req, res) => {
   const { email, password } = req.body;
   db.query(
