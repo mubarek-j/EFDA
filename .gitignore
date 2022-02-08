@@ -1,2 +1,9 @@
 node_modules/
+<<<<<<< HEAD
 .env
+=======
+.env
+*.class
+*.config
+!global.config
+>>>>>>> 47ef12edb06ef7f7eae4cb4b7c56ca6a4fa13831
