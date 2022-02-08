@@ -193,6 +193,8 @@ exports.Adminlogin = (req, res) => {
     }
   );
 };
+
+//User profile show functionality
 exports.profile = (req, res) => {
   const token = req.cookies.user_id;
   const data = jwt.verify(token, process.env.TOKEN_SECRET);
@@ -213,6 +215,7 @@ exports.profile = (req, res) => {
   );
 };
 
+//Edit profile show functionality
 exports.showProfile = function (req, res) {
   const token = req.cookies.user_id;
   const data = jwt.verify(token, process.env.TOKEN_SECRET);
