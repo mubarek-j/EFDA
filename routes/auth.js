@@ -4,6 +4,7 @@ const authController = require("../Controllers/auth");
 const joi = require("@hapi/joi");
 const router = express.Router();
 
+//routes for the pages and authentication
 router.post("/register", authController.register);
 router.post("/Home-EFDA", authController.message);
 router.post("/login", authController.Login);
