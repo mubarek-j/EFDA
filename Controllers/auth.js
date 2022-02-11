@@ -1,3 +1,4 @@
+
 const bcrypt = require("bcryptjs/dist/bcrypt");
 const mysql = require("mysql");
 const jwt = require("jsonwebtoken");
@@ -8,7 +9,7 @@ const db = mysql.createConnection({
   password: process.env.PASSWORD,
   database: process.env.DATABASE,
 });
-
+// registers a user to the system
 exports.register = (req, res) => {
   const {
     first_name,
@@ -19,7 +20,6 @@ exports.register = (req, res) => {
     password,
     password_repeat,
   } = req.body;
-
   db.query(
     "SELECT `email` FROM `userprofile` WHERE `email` = ?",
     [email],
@@ -101,7 +101,7 @@ exports.Adminregister = (req, res) => {
     }
   );
 };
-
+//message
 exports.message = (req, res) => {
   const { fullName, email, phoneNumber, message } = req.body;
   db.query(
@@ -308,12 +308,12 @@ exports.Import1 = (req, res) => {
     }
   );
 };
-
+//logout functionality 
 exports.logout = (req, res) => {
   res.clearcookie("jwt");
   return res.redirect("/");
 };
-
+//Admin message is done
 exports.Adminmessage = (req, res) => {
   db.query("SELECT * FROM `messages`", (error, result) => {
     if (error) {
@@ -323,7 +323,7 @@ exports.Adminmessage = (req, res) => {
     }
   });
 };
-
+//Admin
 exports.Admin = (req, res) => {
   db.query("SELECT * FROM `order`", (error, result) => {
     if (error) {
