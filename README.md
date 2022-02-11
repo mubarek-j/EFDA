@@ -6,3 +6,7 @@ Mubarek Jenberu ETS 0776/11
 Rabia Hassen ETS 0879/11
 Natanim Issa ETS 0813/11
 Mohammed Abdrohman ETS 0768/11
+
+Uername and Password
+Username: natizkingdom@gmail.com
+Password: 1234567
